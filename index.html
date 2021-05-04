@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+        <link rel="stylesheet" href="vendor/fontawesome-free-5.15.3-web/css/all.min.css">
+        <title>Sistema Gestor de Reos</title>
+    </head>
+    <body>
+        <header class="bg-dark text-white text-center pt-3 pb-3 container-fluid">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <!-- <img id="logo" src="img/logo.png" alt="Imagen del logo"> -->
+                </div>
+                <div class="col-12 col-md-6 col-lg-8">
+                    <h1 id="titulo">Gestor de Reos</h1>
+                </div>
+            </div>
+        </header>
+        <main class="containter-fluid pt-5 ms-5">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4 ms-5" style="width: 30%;">
+                    <div class="card">
+                        <div class="card-header bg-dark text-light">
+                            <span>Registrar Reo</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <label for="nombre-txt" class="form-label">Nombre</label>
+                                <input required="" type="text" placeholder="Ingrese nombre del Reo" class="form-control" id="nombre-txt">
+                            </div>
+                            <div class="mb-3">
+                                <label for="apellido-txt" class="form-label">Apellido</label>
+                                <input required="" type="text" placeholder="Ingrese Apellido del Reo" class="form-control" id="apellido-txt">
+                            </div>
+                            <div class="mb-3">
+                                <label for="crimenes-txt" class="form-label">Cantidad de crimenes</label>
+                                <input required="" type="number" placeholder="Ingrese Cantidad" class="form-control" id="crimenes-txt">
+                            </div>
+                            <div class="mb-3">
+                                <label for="detalle-crimenes-txt" class="form-label">Detalle Crimenes</label>
+                                <textarea id="detalle-crimenes-txt"></textarea>
+                            </div>
+                            <!--TODO: Realizar programacion de ciudades en JS-->
+                            <div class="mb-3">
+                                <label for="tipo-select" class="form-label">Tipo</label>
+                                <div id="tipo-select-ciudad">
+                                  <!-- <option id="1" value="1">Viña del Mar</option>
+                                  <option id="2" value="2">Quilpue</option>
+                                  <option id="3" value="3">Santiago</option>
+                                  <option id="4" value="4">Valparaiso</option>-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="row">
+                                <div class="d-grid gap-2">
+                                    <button type="button" id="registrar-btn" class="btn btn-success">Registar Reo</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-8" style="width: 60%;">
+                    <div class="card">
+                        <div class="card-header bg-dark text-light">
+                            <span>Reos Ingresados</span>
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-bordered table-hover table-striped table-responsive">
+                                <thead class="bg-primary text-white">
+                                    <tr>
+                                        <th>Nro</th>
+                                        <th>Nombre del Reo</th>
+                                        <th>Detalle del Reo</th>
+                                        <th>Ciudad del Reo</th>
+                                        <th>Gravedad del Reo</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbody-tabla"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+        <script src="vendor/tinymce/js/tinymce/tinymce.min.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>
